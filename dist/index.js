@@ -18,6 +18,17 @@ inquirer.prompt([
              return false;
              }
          }
-     },
+     },{
+     type: 'maxLength-input',
+        name: 'color',
+        message: 'What color would you like?',
+        validate: colorInput => {
+            if(colorInput) {
+            return true;
+             } else {
+            console.log("please enter a color")
+             return false;
+             }
+         }
+     }
  ]).then(console.log)
- 
