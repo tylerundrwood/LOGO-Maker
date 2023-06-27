@@ -30,5 +30,19 @@ inquirer.prompt([
              return false;
              }
          }
+     },{
+        type: 'maxLength-input',
+        name: 'shape',
+        message: 'What shape would you like?',
+        choices: 'square, circle, triangle',
+        validate: shapeInput => {
+            if(shapeInput) {
+            return true;
+             } else {
+            console.log("please enter a color")
+             return false;
+             }
+         }
+        
      }
  ]).then(console.log)
