@@ -1,8 +1,8 @@
 const inquirer = require('inquirer')
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
 inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
-const { Triangle, Square, Circle } = require("./dist");
-// const fs = require('fs');
+const { Triangle, Square, Circle } = require("./dist/shape");
+ const fs = require('fs');
 // TODO: Create an array of questions for user input
 // ADD VALIDATION TO QUESTIONS!!!!!!!
 function writeToFile(fileName, answers) {
