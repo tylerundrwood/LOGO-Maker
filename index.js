@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
 inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
-const { Triangle, Square, Circle } = require("./lib");
+const { Triangle, Square, Circle } = require("./dist");
 // const fs = require('fs');
 // TODO: Create an array of questions for user input
 // ADD VALIDATION TO QUESTIONS!!!!!!!
@@ -28,9 +28,7 @@ let shapeChoice;
   }
   
   svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
-
   svgString += "</g>";
-
   svgString += "</svg>";
 
   fs.writeFile(fileName, svgString, (err) => {
